@@ -1,25 +1,55 @@
-print('=Alışveriş Listesi=\nListeye ekleme yapmak için: ekle yazınız. \nListeden çıkarma yapmak için: cıkar yazınız.'
-      '\nListeyi görmek için: bitti yazınız.\nListeyi temizlemek için: temizle yazınız.')
+#def alıştırması için def kullanılarak yazılmıştır
 
-durum = input("İşlem giriniz: ")
+print('=Alışveriş Listesi='
+      '\nListeye ekleme yapmak için: 1'
+      '\nListeden çıkarma yapmak için: 2'
+      '\nListeyi görmek için: 3'
+      '\nListeyi temizlemek için: 4'
+      '\nÇıkış yapmak için: 5')
+
 liste = []
-if durum == "ekle":
-    madde = ""
-    while madde != "bitti":
-        madde = input("Madde giriniz: ")
-        liste.append(madde)
-        if durum == "cıkar":
-            numara = int(input("Numara giriniz: "))
-            del liste[numara-1]
-            print(f"Listedeki {numara} numaralı maddeyi sildiniz.")
 
-        elif durum == "temizle":
-            liste.clear()
-            print("Liste temizlendi.")
-
+def ekle():
+    eklenen_madde = input("Madde giriniz: ")
+    liste.append(eklenen_madde)
     print(f"Alışveriş Listeniz: {liste}")
-else:
-    print("Geçerli komudu girmediniz.")
+
+
+def sil():
+    silinen_madde = int(input("Silmek istediğiniz madde: "))
+    liste.pop(silinen_madde+1)
+    print(f"Alışveriş Listeniz: {liste}")
+
+
+def goster():
+    print(f"Alışveriş Listeniz: {liste}")
+
+
+def temizle():
+    liste.clear()
+    print("Liste tamamen temizlendi.")
+
+while True:
+    secim = int(input("Seçenek: "))
+    if secim==1:
+        ekle()
+
+    elif secim==2:
+        sil()
+
+    elif secim==3:
+        goster()
+
+    elif secim==4:
+        temizle()
+
+    elif secim==5:
+        break
+
+    else:
+        print("Geçerli seçenek giriniz!")
+
+
 
 
 
