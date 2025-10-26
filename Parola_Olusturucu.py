@@ -16,7 +16,7 @@ kucuk_h=list("abcdefghijklmnopqrstuvwxyz")
 ozel_k=list("!@#$%^&*")
 sifre_listesi=[]
 
-while(1): #Kullanıcıdan aldığımız veriyi işleyerek değerlere atamak.
+while(1): #Kullanıcıdan input alarak aldığımız veriyi işleyerek değerlere atamak.
     secim = int(input("Listeden seçim yapınız: "))
     if(secim==1):
         sifre_listesi.extend(buyuk_h)
