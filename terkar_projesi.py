@@ -17,7 +17,7 @@ def ogrenci_ekle(numara,ad,soy_ad,vize,final):
 
 def not_degistir(numara,vize,final):
     hangi_ogrenci = numara.index(int(input("Notunu değiştirmek istediğiniz öğrencinin numarasını giriniz: ")))
-    secim = input("Hangi notu değiştirmek istiyorsunuz? (vize/final)")
+    secim = input("Hangi notu değiştirmek istiyorsunuz? (vize/final): ")
     if secim.strip().lower() == "vize":
         yeni_vize_not = int(input("Yeni vize notunu giriniz: "))
         vize.insert(hangi_ogrenci, yeni_vize_not)
