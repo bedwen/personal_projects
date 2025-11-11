@@ -1,3 +1,4 @@
+#O(1) Sabit Zaman Karmaşıklığı
 def son_eleman(sayilar):
     return sayilar[-1]
 
