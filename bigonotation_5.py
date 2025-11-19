@@ -8,3 +8,4 @@ def kabarcik_sirala(dizi):
 sayilar = [5, 3, 1, 7, 9, 11, 13, 15, 17, 19, 6]
 kabarcik_sirala(sayilar)
 print(sayilar)
+
