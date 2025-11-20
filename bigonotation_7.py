@@ -1,8 +1,16 @@
-def faktoriyel(n):
-    if n == 0 or n == 1:
-        return 1
+def permutasyon(a, l, r):
+    if l == r:
+        print(''.join(a))
     else:
-        return n*faktoriyel(n-1) #5*4*3*2*1
+        for i in range(l, r + 1):
+            a[l], a[i] = a[i], a[l]
+            permutasyon(a, l + 1, r)
+            a[l], a[i] = a[i], a[l]
 
-print(faktoriyel(5))
+strListe = "ABC"
+n = len(strListe)
+a = list(strListe)
+permutasyon(a, 0, n - 1)
+
+
 
