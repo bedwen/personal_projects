@@ -1,0 +1,5 @@
+#Sabit
+PI = 3.14
+HEIGHT = 20
+SPEED = 120
+
